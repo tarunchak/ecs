@@ -8,6 +8,28 @@
 </head>
 <body>
     <p> This is {{ name }}'s page. </p>
+    {% if name == 'Emeka' %}
+    <img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:10%">
+    <p>PhD fellow at London South Bank University. The research focus is on Edge Intelligence and cloud 
+        resource management in 5G. Other interests include cloud service orchestration, 
+        softwarization, Data science and IoT.</p>
+
+    {% elif name == 'Callum' %}
+    <img src="{{ url_for('static', filename='callum.jpeg') }}"  alt="callum" style="width:10%">
+    <p>Callum is a Cambridge alumnus who enjoys singing in his local choir and playing the violin. </p>
+    
+    {% elif name == 'Kevin' %}
+    <img src="{{url_for('static', filename='kevin.jpeg')}}" alt="kevin" style="width:10%">
+    <p>Recently graduated from a master in Electronic Engineering and working as a Dev Ops engineer at Sky</p>
+    
+    {% elif name == 'Will' %}
+    <img src="{{url_for('static', filename='will.jpeg')}}" alt="will" style="width:10%">
+    <p> Will has got expierence in the maritime industury as a deckhand and learnt to code during the 
+        COVID-19 lockdown.
+    </p>
+    {% else %}
+
+    {% endif %}
 </body>
 </html>
 
