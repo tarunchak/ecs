@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+    {% block title %}Team Tardis{% endblock %}
+    {% block content %}
     <p> This is {{ name }}'s page. </p>
     {% if name == 'Emeka' %}
     <img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:10%">
@@ -30,6 +24,5 @@
     {% else %}
 
     {% endif %}
-</body>
-</html>
 
+    {% endblock %}

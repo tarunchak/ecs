@@ -6,7 +6,7 @@ members = 'Emeka', 'Kevin', 'Callum', 'Will'
 
 @app.route('/')
 def main_page ():
-    return render_template('main.html')
+    return render_template('index.html')
 
 @app.route('/<name>/')
 def member (name):
@@ -19,4 +19,5 @@ def member (name):
 def not_found(error):
     return render_template('404.html', errors=[error]), 404
 
-    
+if __name__ == '__main__':
+    app.run()
