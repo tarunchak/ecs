@@ -3,8 +3,8 @@ import os
 # import app
 
 class Flasktestcase(unittest.Testcase):
-    
-    
+    pass
+
 
 
     # Ensure the flask app was set up correctly
