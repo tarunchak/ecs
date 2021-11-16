@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Team Tardis{% endblock %}
 {% block content %}
-<ul>
-<a href="{{ url_for('member', name='Emeka') }}"><li>Emeka</li></a>
-<a href="{{ url_for('member', name='Callum') }}"><li>Callum</li></a>
-<a href="{{ url_for('member', name='Will') }}"><li>Will</li></a>
-<a href="{{ url_for('member', name='Kevin') }}"><li>Kevin</li></a>
-</ul>
+
+<table class="table">
+<a href="{{ url_for('member', name='Emeka') }}"><img src="{{ url_for('static', filename='emeka.jpeg') }}" alt="emeka" style="width:25%"></a>
+<a href="{{ url_for('member', name='Callum') }}"><img src="{{ url_for('static', filename='callum.jpeg') }}"  alt="callum" style="width:25%"></a>
+<a href="{{ url_for('member', name='Will') }}"><img src="{{url_for('static', filename='will.jpeg')}}" alt="will" style="width:25%"></a>
+<a href="{{ url_for('member', name='Kevin') }}"><img src="{{url_for('static', filename='kevin.jpeg')}}" alt="kevin" style="width:25%"></a>
+</table>
+<p style="text-align:center;">Click on our images to find out more about us!</p>
 {% endblock %}
 
 
